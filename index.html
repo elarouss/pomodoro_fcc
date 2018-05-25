@@ -4,16 +4,11 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link href="css/style.css" rel="stylesheet"/>
-        <script async src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"> 
-        </script>
-        <script src="js/script.js">
-        </script>
     </head>
     <body>
         <div class="row text-center p-3">
             <div class="col-sm-12">
-                <h1 class="display-4">Pomodoro App</h1>
+                <h1 id="app-title" class="display-4">Pomodoro App</h1>
             </div>       
         </div>
         <div class="row text-center h-75">
@@ -24,7 +19,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Pomodoro</span>
                             </div>
-                            <input class="form-control" type="number" value="25" min="1" max="59" />
+                            <input id="pomodoro-num" class="form-control" type="number" value="25" min="1" max="59" />
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -32,23 +27,37 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Break</span>
                             </div>
-                            <input class="form-control" type="number" value="25" min="1" max="59" />
+                            <input id="break-num" class="form-control" type="number" value="25" min="1" max="59" />
                         </div>
                     </div>
                 </div>
-                <div class="display-1">
-                    00:53
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input id="incr-checkbox" type="checkbox" class="form-check-input">
+                        <label class="form-check-label"> incremental? </label>
+                    </div>
+                </div>
+                <div id="timer" class="display-1">
+                    <span id="display-min">00</span>:<span id="display-sec">00</span>
                 </div>
                 <div class="progress w-100">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                    <div id="pomodoro-progress" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                     </div>
                 </div>
                 <div id="control-btns" class="p-4 btn-group"  role="group"  aria-label="pomodoro buttons">
-                    <button type="button" class="btn btn-success">Start</button>
-                    <button type="button" class="btn btn-secondary">Pause</button>
-                    <button type="button" class="btn btn-danger">Stop</button>
+                    <button id="start-btn" type="button" class="btn btn-secondary">
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <button id="stop-btn" type="button" class="btn btn-secondary">
+                        <i class="fa fa-stop"></i>
+                    </button>
                 </div>
             </div> 
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"> 
+        </script>
+        <script src="js/script.js">
+        </script>
     </body>
 </html>

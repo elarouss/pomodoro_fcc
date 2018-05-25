@@ -1,6 +1,25 @@
 body {
-    background-color: #FFF3E0;
-    color : #E65100;
+    background-color: #FAFAFA;
+}
+
+#app-title {
+    color : #424242;
+}
+
+.red-progress {
+    background-color : #B71C1C;
+}
+
+.red-timer {
+    color : #B71C1C;
+}
+
+.green-progress {
+    background-color : #00695C;
+}
+
+.green-timer {
+    color : #00695C;
 }
 
 #control-btns {
