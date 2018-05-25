@@ -102,7 +102,7 @@ function decrement(t){
 }
 
 
-/// something
+/// functions to change style for each phase
 
 function startPomodoro(){
     setTitle("Pomodoro Time !");
@@ -113,6 +113,9 @@ function startBreak(){
     setTitle("Break Time !");
     setColor("red");
 }
+
+
+/// main functions
 
 function start(){
     const conf = getConfig();
@@ -134,16 +137,15 @@ function start(){
         else
             startBreak();
 
-        if (conf.incremental)
+        if (conf.incremental){
             time = increment(time);
-        else
-            time = decrement(time);
-        displayDigits(time);
-
-        if (!conf.incremental)
-            progress = calcProgress(startTime,time);
-        else
+            displayDigits(time);
             progress = calcProgress(endTime,time);
+        }else{
+            time = decrement(time);
+            displayDigits(time);
+            progress = calcProgress(startTime,time);
+        }
 
         displayProgress(progress);
 
