@@ -1,0 +1,114 @@
+$pink-800 : #AD1457;
+$pink-700: #C2185B;
+$pink-50 : #FCE4EC;
+$red-100: #FFCDD2;
+$white : #FFFFFF;
+
+$bp : 420px;
+
+@font-face {
+  font-family: 'digital';
+  src: url('/fonts/digital-7.mono.ttf');
+}
+
+body {
+  background-color: $pink-800;
+  color: $white;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Play';
+
+  header {
+    font-size: 3rem;
+    font-family: 'Kavoon';
+    @media (max-width: $bp) {
+      font-size: 2.4rem ;
+    }
+  }
+
+  #pomodoro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #time-controls {
+      display: flex;
+      justify-content: space-between;
+
+      .time-setter {
+        margin: 0.5rem 1.5rem;
+        font-size: 1.7rem;
+        @media(max-width: $bp){
+          font-size: 1.2rem;
+        }
+
+        #break-label, #session-label {
+          margin: 0.5rem;
+          text-align: center;
+        }
+        .setter-controls {
+          text-align: center;
+          .arrow {
+            margin: 0.4rem;
+            color: white;
+          }
+          #break-length, #session-break {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    #display {
+      border: 6px solid $pink-700;
+      border-radius: 3rem;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 0.3rem;
+
+      #timer-label {
+        font-size: 2rem;
+      }
+
+      #time-left {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        font-family: 'digital';
+      }
+    }
+
+    #pomodoro-controls {
+      margin: 1rem;
+      i{
+        font-size: 1.5rem;
+        margin: 0rem   0.5rem;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    color: $pink-50;
+    i {
+      color: $red-100;
+    }
+
+    a {
+      text-decoration: none;
+      color: $pink-50;
+    }
+
+  }
+}

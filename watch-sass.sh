@@ -1,0 +1,1 @@
+ag -l | entr -s 'sassc src/App.scss src/App.css'
