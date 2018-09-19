@@ -4,6 +4,8 @@
   "homepage": "http://elarouss.github.io/pomodoro_fcc",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.0.0",
+    "only": "0.0.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -14,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
