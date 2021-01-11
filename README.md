@@ -1,3 +1,3 @@
 # Pomodoro Clock
-[Live Version](https://elarouss.github.io/pomodoro_fcc/)
+[Live Version](https://elarous.github.io/pomodoro_fcc/)
 ![Screenshot of the project](screenshot.png)
